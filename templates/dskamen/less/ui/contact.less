@@ -1,0 +1,89 @@
+.contact {
+    &-top {
+        padding: 0 15px;
+        height: 70px;
+        display: table-cell;
+        vertical-align: middle;
+
+        li {
+            color: @nav-link-font-color;
+            font-size: ceil(@font-size-base * 0.65);
+            list-style: none;
+        }
+
+        &-facebook {
+            float: left;
+            a {
+                &:focus, &:active, &:hover {
+                    text-decoration: none;
+                }
+            }
+            i {
+                display: table-cell;
+                vertical-align: middle;
+                height: 70px;
+                font-size: 2.2em;
+                color: darken(@core-color-secondary, 7%);
+            }
+        }
+    }
+
+    &-form {
+        form {
+            width: 100%;
+            color: @core-color-secondary;
+
+            input {
+                outline: 0;
+                width: 100%;
+                box-shadow: none;
+                background: 0;
+                padding: 10px 0 10px 0;
+                border-left: none;
+                border-right: none;
+                border-top: none;
+                border-bottom: 3px solid #F5F5F5;
+                font-size: 20px;
+
+                &:focus {
+                    border-bottom: 3px solid @core-color-secondary;
+                }
+            }
+
+            textarea {
+                outline: 0;
+                width: 100%;
+                background: 0;
+                resize: none;
+                border: none;
+                font-size: 20px;
+                padding: 10px 0 10px 0;
+                border-bottom: 3px solid #fff;
+
+                &:focus {
+                    border-bottom: 3px solid @core-color-secondary;
+                }
+            }
+
+            button {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: @screen-xs-max) {
+    .contact {
+        &-top {
+            li {
+                font-size: ceil(@font-size-base * 0.6);
+            }
+
+            &-facebook {
+                i {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+}

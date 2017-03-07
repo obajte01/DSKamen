@@ -1,0 +1,15 @@
+.button-variant(@color; @background; @border) {
+    color: @color;
+    background-color: @background;
+    border-color: @border;
+
+    &:hover, &:focus, &.focus, &:active, &.active, .open > .dropdown-toggle& {
+        color: @color;
+        background-color: lighten(@background, 3%);
+        border-color: lighten(@border, 3%);
+    }
+}
+
+.button-gradient(@color) {
+    #gradient > .vertical-three-colors(lighten(saturate(@color, 3%), 3%); @color; 38%; darken(desaturate(@color, 4%), 4%));
+}

@@ -1,0 +1,59 @@
+.btn {
+    font-weight: @font-weight-bold;
+    text-decoration: none;
+    white-space: normal;
+    text-transform: uppercase;
+    border: none;
+    opacity: 1;
+
+    .transition(@btn-transition);
+    .button-size(@core-btn-vertical; @core-btn-horizontal; @btn-font-size; @line-height-base; @core-btn-border-radius);
+
+    &,
+    &:active,
+    &.active {
+        &:focus,
+        &.focus {
+            outline: none;
+        }
+    }
+}
+
+.btn-primary {
+    .transition(@btn-transition);
+    .button-gradient(@btn-primary-gradient-color-1);
+
+    &:hover, &:focus {
+        .button-gradient(lighten(@core-color-secondary, 3%));
+    }
+    &:active {
+        .button-gradient(darken(@core-color-secondary, 3%));
+    }
+    &:focus {
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 15px @btn-default-border-focus;
+    }
+}
+
+.btn-default {
+    border: 1px solid;
+    .button-variant(@core-color-secondary; @btn-default-bg; @btn-default-border);
+    &:hover {
+        background-color: @btn-default-bg-hover;
+        color: @btn-default-color;
+    }
+    &:active {
+        box-shadow: none;
+        .button-variant(@btn-default-color-active; @btn-default-bg-active; @btn-default-border-active);
+    }
+    &:focus {
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 15px @btn-default-border-focus;
+        .button-variant(@btn-default-color; @btn-default-bg-hover; @btn-default-border-focus);
+
+    }
+}
+
+@media (max-width: @screen-sm-max) {
+    .btn {
+        .button-size(@core-btn-vertical-mobile; @core-btn-horizontal-mobile; @btn-font-size; @line-height-base; @core-btn-border-radius);
+    }
+}

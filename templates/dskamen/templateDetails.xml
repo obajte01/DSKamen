@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension
+        version="1.6"
+        type="template"
+        client="site">
+    <name>Dskamen template</name>
+    <creationDate>10.12.2016</creationDate>
+    <author>Jan Obajtek</author>
+    <authorEmail>info@komtesa.com</authorEmail>
+    <authorUrl>http://www.komtesa.com</authorUrl>
+    <copyright>Copyright (C) 2016 - All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <version>3.0</version>
+    <description>Default DSkamen templates - bootstrap3</description>
+    <positions>
+        <position>branding-banner-left</position>
+        <position>branding-banner-right</position>
+        <position>toolbar</position>
+        <position>top-panel</position>
+        <position>header</position>
+        <position>menu</position>
+        <position>breadcrumb</position>
+        <position>sidebar</position>
+        <position>content</position>
+        <position>sluzby</position>
+        <position>galerie</position>
+        <position>content-subscribe</position>
+        <position>footer</position>
+        <position>slider</position>
+        <position>copyright</position>
+        <position>debug</position>
+        <position>kontakt</position>
+    </positions>
+    <languages folder="language">
+        <language tag="cs-CZ">cs-CZ/cs-CZ.tpl_dskamen.ini</language>
+        <language tag="cs-CZ">cs-CZ/cs-CZ.tpl_dskamen.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field type="note" heading="h3" label="TPL_DSKAMEN_THEME_SETTINGS_TITLE" />
+                <field name="theme" label="TPL_DSKAMEN_THEME_SETTINGS_SELECTOR_LABEL"
+                       description="TPL_DSKAMEN_THEME_SETTINGS_SELECTOR_DESC"
+                       type="FolderList"
+                       hide_none="true"
+                       hide_default="true"
+                       directory="templates/hubbr/themes" />
+                <field name="contact_email"  type="text" default="" filter="raw"
+                       label="TPL_DSKAMEN_CONTACT_MAIL"
+                       description="TPL_DSKAMEN_CONTACT_MAIL_DESC" />
+            </fieldset>
+
+            <fieldset name="advanced">
+
+                <field name="seo_header"  type="text" default="" filter="raw"
+                       label="TPL_DSKAMEN_SEO_HEADER_LABEL"
+                       description="TPL_DSKAMEN_SEO_HEADER_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>   

@@ -1,0 +1,148 @@
+header {
+    background-color: rgba(255, 255, 255, 0.84);
+    height: 70px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+main {
+    .container-fluid {
+        padding: 0;
+
+        .col-xs-12 {
+            padding: 0;
+        }
+    }
+}
+
+.triangle {
+    position: absolute;
+    background: url('../images/graphic/triangle-transparent.png');
+    width: 100%;
+    height: 75px;
+    top: 70px;
+    z-index: -1;
+
+    &-footer {
+        position: absolute;
+        background: url('../images/graphic/triangles-footer-md.png');
+        width: 100%;
+        height: 75px;
+        //bottom: 600px;
+        top: -75px;
+        z-index: -1;
+        background-size: cover;
+    }
+
+    &-grey {
+        position: absolute;
+        border-bottom: 75px solid #464646;
+        border-left: 1280px solid transparent;
+        bottom: 600px;
+        z-index: 100;
+        width: 100%;
+    }
+
+    &-lightgrey {
+        position: absolute;
+        border-bottom: 75px solid #aeba1c;
+        border-right: 1280px solid transparent;
+        bottom: 600px;
+        z-index: 99;
+        width: 100%;
+    }
+}
+
+.box-shadow {
+    box-shadow: 0 7px 12px @core-color-black;
+}
+
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    object-position: 50% 70%;
+}
+
+.logo {
+    display: block;
+    margin-top: 15px;
+
+    img {
+        z-index: 1;
+    }
+}
+
+.facebook-top {
+    float: left;
+
+    a {
+        &:focus, &:active, &:hover {
+            text-decoration: none;
+        }
+    }
+
+    i {
+        display: table-cell;
+        vertical-align: middle;
+        height: 70px;
+        font-size: 2.2em;
+        color: @nav-link-font-color;
+    }
+}
+
+::selection {
+    background: @core-color-secondary; /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    background: @core-color-secondary; /* Gecko Browsers */
+}
+
+.left-border {
+    border-left: 1px solid @body-bg;
+}
+
+.dashed {
+    border-style: dashed;
+}
+
+.smaller {
+    text-align: center;
+    font-size: ceil((@font-size-base * 0.85));
+    padding: 0;
+
+    p {
+        text-align: center;
+        font-size: ceil((@font-size-base * 0.85));
+        padding: 0;
+    }
+}
+
+@media (max-width: @screen-xs-max) {
+    header {
+        height: 138px;
+    }
+
+    .logo {
+        margin-top: 9px;
+
+        img {
+            width: 136px;
+        }
+    }
+
+    .border-top {
+        border-top: 1px solid @body-bg;
+    }
+
+    .triangle {
+        &-footer {
+            bottom: 1050px;
+        }
+    }
+}
